@@ -410,7 +410,7 @@ methods: {
 
 ``` html
 <div>
-  <span v-for="n in 10">{{ n }} </span>
+  <span v-for="n in 10">{{ n }}</span>
 </div>
 ```
 
@@ -418,7 +418,7 @@ Resultado:
 
 {% raw %}
 <div id="range" class="demo">
-  <span v-for="n in 10">{{ n }} </span>
+  <span v-for="n in 10">{{ n }}</span>
 </div>
 <script>
   new Vue({ el: '#range' })
@@ -460,7 +460,7 @@ Si, por el contrario, su intención es omitir condicionalmente la ejecución del
     {{ todo }}
   </li>
 </ul>
-<p v-else>No quedan todos !</p>
+<p v-else>No quedan todos!</p>
 ```
 
 ## `v-for` con un Componente
@@ -497,7 +497,7 @@ Aquí hay un ejemplo completo de una lista de tareas simple:
     <input
       v-model="newTodoText"
       id="new-todo"
-      placeholder=E.g. Feed the cat"
+      placeholder="E.g. Feed the cat"
     >
     <button>Agregar</button>
   </form>
