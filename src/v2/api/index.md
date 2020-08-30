@@ -1294,8 +1294,6 @@ type: api
 
   Un objeto representando las propiedades actuales que un componente recibió. La instancia Vue provee acceso a estas propiedades en su objeto _props_.
 
-  An object representing the current props a component has received. The Vue instance proxies access to the properties on its props object.
-
 ### vm.$el
 
 - **Tipo:** `HTMLElement`
