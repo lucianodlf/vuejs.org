@@ -263,7 +263,7 @@ Si no tiene cuidado, los componentes recursivos también pueden llevar a bucles 
 name: 'stack-overflow',
 template: '<div><stack-overflow></stack-overflow></div>'
 ```
-Un componente como el anterior generará un error de tipo "max stack size exceeded"(_"tamaño de pila máximo excedido"_), así que asegúrese de que la invocación recursiva sea condicional (es decir, use un `v-if` que eventualmente será` falso`).
+Un componente como el anterior generará un error de tipo "max stack size exceeded"(_"tamaño de pila máximo excedido"_), así que asegúrese de que la invocación recursiva sea condicional (es decir, use un `v-if` que eventualmente será `false`).
 
 ### Referencias circulares entre componentes
 
