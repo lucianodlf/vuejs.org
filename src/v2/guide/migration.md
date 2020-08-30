@@ -318,7 +318,7 @@ Las propiedades ahora son siempre en un sentido. Para producir efectos colateral
 
 ### Mutación de Propiedades <sup>deprecado</sup>
 
-Ahora, mutar una propiedad local es considerado un anti-patrón. por ejemplo, declarar una propiedad y luego mutar la misma mediante `this.myProp = someOtherValue` en el componente. Dado el nuevo mecanismo de renderizado, siempre que el componente padre se re-renderize, los cambios locales de los componentes hijo se sobreescribirán.
+Ahora, mutar una propiedad local es considerado un anti-patrón. por ejemplo, declarar una propiedad y luego mutar la misma mediante `this.myProp = someOtherValue` en el componente. Dado el nuevo mecanismo de renderizado, siempre que el componente padre se re-renderice, los cambios locales de los componentes hijo se sobreescribirán.
 
 La mayoría de los casos de uso que requieren mutar una propiedad pueden ser reemplazados por una de las siguientes opciones:
 
