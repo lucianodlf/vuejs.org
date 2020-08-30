@@ -275,7 +275,7 @@ type: api
 
 - **Uso:**
 
-  Borra una propiedad de un objeto. Si el objeto es reactivo, asegura que el borrado dispara actualizaciones en la vista. Esto es usado principalmente para sortear las limitaciones de Vue que no puede detectar la eliminación de propiedades, pero usted raramente necesitará usarlo.
+  Borra una propiedad de un objeto. Si el objeto es reactivo, asegura que el borrado dispara actualizaciones en la vista. Esto es usado principalmente para sortear las limitaciones de Vue, que no puede detectar la eliminación de propiedades, pero usted raramente necesitará usarlo.
 
   <p class="tip">El objeto destino no puede ser una instancia de Vue, o el objeto raíz data de una instancia de Vue.</p>
 
