@@ -917,7 +917,7 @@ type: api
 
 - **Detalles:**
 
-  Se invoca cuando se captura un error de cualquier componente descendiente. El _hook_ recibe tres argumentos: el error, la instancia del componente que disparó el error y una cadena que contiene información sobre dónde se capturó el error. El _hook_ puede devolver `falso` para evitar que el error se propague aún más.
+  Se invoca cuando se captura un error de cualquier componente descendiente. El _hook_ recibe tres argumentos: el error, la instancia del componente que disparó el error y una cadena que contiene información sobre dónde se capturó el error. El _hook_ puede devolver `false` para evitar que el error se propague aún más.
 
   <p class="tip">Puede modificar el estado del componente en este _hook_. Sin embargo, es importante tener condicionales en su _template_ o función de renderización que alterne otro contenido cuando se haya capturado un error; de lo contrario, el componente caerá en un bucle de renderización infinito.</p>
 
@@ -929,7 +929,7 @@ type: api
 
   - Si el _hook_ `errorCaptured` dispara un error, tanto este error como el error original se capturan y se envían al `config.errorHandler` global.
 
-  - Un _hook_ `errorCaptured` puede devolver `falso` para evitar que el error continúe propagándose. Esto esencialmente diría "este error ya ha sido manejado y debe ignorarse". Evitará cualquier _hook_ adicional de `ErrorCaptured` y el error invocará el `config.errorHandler` global.
+  - Un _hook_ `errorCaptured` puede devolver `false` para evitar que el error continúe propagándose. Esto esencialmente diría "este error ya ha sido manejado y debe ignorarse". Evitará cualquier _hook_ adicional de `ErrorCaptured` y el error invocará el `config.errorHandler` global.
 
 ## Opciones / Recursos
 
