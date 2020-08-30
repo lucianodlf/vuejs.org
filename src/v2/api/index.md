@@ -1009,7 +1009,7 @@ type: api
 
   Permite extender declarativamente otro componente (puede ser tanto un objeto plano con opciones como un constructor) sin tener que utilizar `Vue.extend`. Esto está destinado principalmente a facilitar la extensión entre componente _single-file_.
 
-  Esto es similar a los `mixinis`.
+  Esto es similar a los `mixins`.
 
 - **Ejemplo:**
 
