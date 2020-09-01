@@ -450,7 +450,7 @@ Cuando existen en el mismo nodo, `v-for` tiene una prioridad más alta que `v-if
 </li>
 ```
 
-Lo anterior hace que todos los que no estén completos, se renderizen.
+Lo anterior hace que todos los que no estén completos, se rendericen.
 
 Si, por el contrario, su intención es omitir condicionalmente la ejecución del bucle, puede colocar el `v-if` en un elemento de envoltura (o [`<template>`](conditional.html#Conditional-Groups-with-v-if-on-lt-template-gt)). Por ejemplo:
 

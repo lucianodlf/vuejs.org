@@ -275,7 +275,7 @@ type: api
 
 - **Uso:**
 
-  Borra una propiedad de un objeto. Si el objeto es reactivo, asegura que el borrado dispara actualizaciones en la vista. Esto es unado principalmente para sortear las limitaciones de Vue que no puede detectar la eliminación de propiedades, pero usted raramente necesitará usarlo.
+  Borra una propiedad de un objeto. Si el objeto es reactivo, asegura que el borrado dispara actualizaciones en la vista. Esto es usado principalmente para sortear las limitaciones de Vue, que no puede detectar la eliminación de propiedades, pero usted raramente necesitará usarlo.
 
   <p class="tip">El objeto destino no puede ser una instancia de Vue, o el objeto raíz data de una instancia de Vue.</p>
 
@@ -1294,8 +1294,6 @@ type: api
 
   Un objeto representando las propiedades actuales que un componente recibió. La instancia Vue provee acceso a estas propiedades en su objeto _props_.
 
-  An object representing the current props a component has received. The Vue instance proxies access to the properties on its props object.
-
 ### vm.$el
 
 - **Tipo:** `HTMLElement`
@@ -1353,7 +1351,7 @@ type: api
 
 - **Detalles:**
 
-  Los componentes hijos directos de la instancia actual. **Note que no hay garantía de orden para `$children`, y que esta propiedad no es reactiva.** Si usted encuentra la necesidad de utilizar `$children` para _binding_ de datos, considre utilizar un arreglo y `v-for` para generar los componentes hijos y utilize ese arreglo como la fuente de la verdad.
+  Los componentes hijos directos de la instancia actual. **Note que no hay garantía de orden para `$children`, y que esta propiedad no es reactiva.** Si usted encuentra la necesidad de utilizar `$children` para _binding_ de datos, considere utilizar un arreglo y `v-for` para generar los componentes hijos y utilize ese arreglo como la fuente de la verdad.
 
 ### vm.$slots
 
@@ -1402,7 +1400,7 @@ type: api
 
 - **Vea también:**
   - [Componente `<slot>`](#slot-1)
-  - [Distribución de contendo con Slots](../guide/components.html#Content-Distribution-with-Slots)
+  - [Distribución de contenido con Slots](../guide/components.html#Content-Distribution-with-Slots)
   - [Funciones de Renderizado - Slots](../guide/render-function.html#Slots)
 
 ### vm.$scopedSlots
@@ -1421,7 +1419,7 @@ type: api
 
 - **Vea también:**
   - [Componente `<slot>`](#slot-1)
-  - [Distribución de contendo con Slots](../guide/components.html#Content-Distribution-with-Slots)
+  - [Distribución de contenido con Slots](../guide/components.html#Content-Distribution-with-Slots)
   - [Funciones de Renderizado - Slots](../guide/render-function.html#Slots)
 
 ### vm.$refs
@@ -1804,7 +1802,7 @@ type: api
 
 - **Uso:**
 
-  Pospone la ejecución de la función _callback_ para luego del próximo ciclo de actualización del DOM. Utilice este método inmediatamente luego de modificar datos para esperar por la actualización del DOM. Este método es el mismo que el método global `Vue.nextTick`, excpeto que el contexto `this` de la función _callback_ es automáticamente vinculado a la instancia que invoco este método.
+  Pospone la ejecución de la función _callback_ para luego del próximo ciclo de actualización del DOM. Utilice este método inmediatamente luego de modificar datos para esperar por la actualización del DOM. Este método es el mismo que el método global `Vue.nextTick`, excepto que el contexto `this` de la función _callback_ es automáticamente vinculado a la instancia que invoco este método.
 
   > Nuevo en 2.1.0+: retorna una promesa (_Promise_) si no fue provista una función _callback_ y estas son soportadas en el entorno de ejecución. Note que Vue no trae un _polyfill_ para promesas, por lo tanto, si su navegador no soporta promesas de forma nativa (mirándote, IE), usted deberá agregar un _polyfill_ por su cuenta.
 
@@ -1871,11 +1869,11 @@ type: api
 
 - **Detalles:**
 
-  Actualiza el `innerHTML` del elemento. **Note que los contenidos son insertados como HTML puro - no serán compilados como pantillas (_templates_) de Vue**. Si usted se encuentra intentando componer plantillas utilizando `v-html`, intente pensar una solución utilizando componentes.
+  Actualiza el `innerHTML` del elemento. **Note que los contenidos son insertados como HTML puro - no serán compilados como plantillas (_templates_) de Vue**. Si usted se encuentra intentando componer plantillas utilizando `v-html`, intente pensar una solución utilizando componentes.
 
   <p class="tip">Renderizar dinámicamente HTML arbitrario en su sitio web puede ser muy peligroso porque puede conducir fácilmente a [ataques XSS](https://en.wikipedia.org/wiki/Cross-site_scripting). Solo use `v-html` en contenido confiable y **nunca** en contenido provisto por el usuario.</p>
 
-  <p class="tip">En [Componentes de un solo archivo](../guide/single-file-components.html), los estilos `scoped` no aplicarán al contenido dentro de `v-html`, porque el HTML no será procesado por el compilador de pantillas de Vue. Si usted quiere aplicar estilos _scoped_ al contendio `v-html`, puede utilizar [módulos CSS](https://vue-loader.vuejs.org/en/features/css-modules.html) o un elemento `<style>` global adicional, con una estrategia como BEM por ejemplo. </div>
+  <p class="tip">En [Componentes de un solo archivo](../guide/single-file-components.html), los estilos `scoped` no aplicarán al contenido dentro de `v-html`, porque el HTML no será procesado por el compilador de plantillas de Vue. Si usted quiere aplicar estilos _scoped_ al contenido `v-html`, puede utilizar [módulos CSS](https://vue-loader.vuejs.org/en/features/css-modules.html) o un elemento `<style>` global adicional, con una estrategia como BEM por ejemplo. </div>
 
 - **Ejemplo:**
 
@@ -1967,7 +1965,7 @@ type: api
 
 - **Uso:**
 
-  Renderiza el elemento o plantilla mutiples veces basado en la fuente de información. El valor de la directiva debe utilizar la sintaxis especial `alias in expresion` para proveer un alias para el elemento actual en el cual se está iterando:
+  Renderiza el elemento o plantilla multiples veces basado en la fuente de información. El valor de la directiva debe utilizar la sintaxis especial `alias in expression` para proveer un alias para el elemento actual en el cual se está iterando:
 
   ``` html
   <div v-for="item in items">
@@ -1982,7 +1980,7 @@ type: api
   <div v-for="(val, key, index) in object"></div>
   ```
 
-  El comportamiento por defecto de `v-for` intentará corregir los elementos _in-place_ sin moverlos. Para forzar un reordanamiento de elementos, usted debe proveer una pista de ordenamiento con el atributo especial `key`:
+  El comportamiento por defecto de `v-for` intentará corregir los elementos _in-place_ sin moverlos. Para forzar un reordenamiento de elementos, usted debe proveer una pista de ordenamiento con el atributo especial `key`:
 
   ``` html
   <div v-for="item in items" :key="item.id">
@@ -2026,7 +2024,7 @@ type: api
 
   Cuando se escucha por eventos nativos del DOM, el método recibe el evento nativo como único argumento. Si se utiliza una declaración _inline_, la declaración tiene acceso a la propiedad especial `$event`: `v-on:click="handle('ok', $event)"`.
 
-  A partir de 2.4.0+, `v-on` también soporta vinculación a un objeto de pares de _event/listener_ sin argumentos. Note que cuando se utliza la sintaxis de objeto, esta no soporta ningún modificador.
+  A partir de 2.4.0+, `v-on` también soporta vinculación a un objeto de pares de _event/listener_ sin argumentos. Note que cuando se utiliza la sintaxis de objeto, esta no soporta ningún modificador.
 
 - **Ejemplo:**
 
@@ -2102,7 +2100,7 @@ type: api
 
   Cuando se utiliza para enlazar una propiedad, la propiedad debe ser declarada en el componente hijo de forma acorde.
 
-  Cuando se utiliza sin argumento, puede ser utilizado para enlazar un objeto que contega pares nombre-valor de atributos. Note que en este modo los atributos `class` y `style` no soportan Arreglo u Objetos.
+  Cuando se utiliza sin argumento, puede ser utilizado para enlazar un objeto que contenga pares nombre-valor de atributos. Note que en este modo los atributos `class` y `style` no soportan Arreglo u Objetos.
 
 - **Ejemplo:**
 
@@ -2248,9 +2246,9 @@ type: api
 
 - **Espera:** `number | string`
 
-  El atributo especial `key` es utilizado principalmente como una pista para el algoritmo del DOM virtual de Vue para identificar _VNodes_ cuando se compara nuevas listas de nodos contra listas antiguas. Sin claves, Vue utiliza un algoritmo que minimiza el movimiento de elementos e intenta parchear/reusar elementos del mismo tipo lo más posible. Con claves, este reordenará elementos basado en el orden de cambio de las claves, y los elementos con claves que ya no estén presentes, siempre serán removidos/destruidos.
+  El atributo especial `key` es utilizado principalmente como una pista para el algoritmo del DOM virtual de Vue para identificar _VNodes_ cuando se compara nuevas listas de nodos contra listas antiguas. Sin claves, Vue utiliza un algoritmo que minimiza el movimiento de elementos e intenta reutilizar elementos del mismo tipo lo más posible. Con claves, este reordenará elementos basado en el orden de cambio de las claves, y los elementos con claves que ya no estén presentes, siempre serán removidos/destruidos.
 
-  Hijos de un mismo padre en común simpre deben tener **claves únicas**. Claves duplicadas causarán errores de renderizado.
+  Hijos de un mismo padre en común siempre deben tener **claves únicas**. Claves duplicadas causarán errores de renderizado.
 
   El caso de uso más común es combinado con `v-for`:
 
@@ -2260,7 +2258,7 @@ type: api
   </ul>
   ```
 
-  También puede ser utilizado para forzar el reemplazo de un elemento/componente en vez de reusar el mismo. Esto puede ser útil cuando usted desee:
+  También puede ser utilizado para forzar el reemplazo de un elemento/componente en vez de reutilizar el mismo. Esto puede ser útil cuando usted desee:
 
   - Lanzar apropiadamente funciones de ciclo de vida de un componente
   - Lanzar transiciones
@@ -2273,13 +2271,13 @@ type: api
   </transition>
   ```
 
-  Cuando `text` cambie, el `<span>` siempre será reemplazado en vez de parchaedo, por lo cual, una transición será lanzada.
+  Cuando `text` cambie, el `<span>` siempre será reemplazado en vez de reutilizado, por lo cual, una transición será lanzada.
 
 ### ref
 
 - **Espera:** `string`
 
-  `ref` es utilizado para registrar una referencia a un elemento o a un componente hijo. La referencia será registrada bajo el objeto `$refs` del componente padre. Si se utiliza en un elemento "plano" del DOM, la referncia será a dicho elemento; si se utiliza en un componente hijo, la referencia será a la instancia de dicha componente:
+  `ref` es utilizado para registrar una referencia a un elemento o a un componente hijo. La referencia será registrada bajo el objeto `$refs` del componente padre. Si se utiliza en un elemento "plano" del DOM, la referencia será a dicho elemento; si se utiliza en un componente hijo, la referencia será a la instancia de dicha componente:
 
   ``` html
   <!-- vm.$refs.p será el nodo del DOM -->
@@ -2313,7 +2311,7 @@ type: api
 
 - **Uso:**
 
-  Utilizado para denotar que un elemento o componente es un _scopet slot_. El valor del atributo debe ser una expresión JavaScript válida que pueda aparecer en la posición del argumento de la firma de una función. Esto quiere decir que, en ambientes soportados, usted puede utilizar desestructuración ES2015 en la expresión. Sirve como un reemplazo para [`scope`](#scope-replaced) en 2.5.0+.
+  Utilizado para denotar que un elemento o componente es un _scoped slot_. El valor del atributo debe ser una expresión JavaScript válida que pueda aparecer en la posición del argumento de la firma de una función. Esto quiere decir que, en ambientes soportados, usted puede utilizar desestructuración ES2015 en la expresión. Sirve como un reemplazo para [`scope`](#scope-replaced) en 2.5.0+.
 
   Este atributo no soporte enlace dinámico.
 
@@ -2512,7 +2510,7 @@ Un metacomponente para representar componentes dinámicos. El componente que se 
   </transition>
   ```
 
-  Note que, `<keep-alive>` está diseñado para el caso en que tiene un componente secundario directo que se está alternando. No funciona si usted tiene un `v-for` dentro de este. Cuando hay varios hijos condicionales, como arriba, `<keep-alive>` requiere que solo se renderize un hijo a la vez.
+  Note que, `<keep-alive>` está diseñado para el caso en que tiene un componente secundario directo que se está alternando. No funciona si usted tiene un `v-for` dentro de este. Cuando hay varios hijos condicionales, como arriba, `<keep-alive>` requiere que solo se renderice un hijo a la vez.
 
 - **`include` y `exclude`**
 
