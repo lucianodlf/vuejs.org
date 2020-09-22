@@ -2461,7 +2461,7 @@ Un metacomponente para representar componentes dinámicos. El componente que se 
 
   Tenga en cuenta que cada hijo en un `<transition-group>` debe tener **una clave única** para que las animaciones funcionen correctamente.
 
-  `<transition-group>` admite transiciones en movimiento a través de la transformación CSS. Cuando la posición de un hijo en la pantalla ha cambiado después de una actualización, se aplicará una clase CSS en movimiento (generada automáticamente desde el atributo `name` o configurada con el atributo `move-class`). Si la propiedad CSS `transform` es "capaz de transición" cuando se aplica la clase en movimiento, el elemento se animará suavemente a su destino utilizando la [técnica FLIP](https://aerotwist.com/blog/flip-your-animaciones/).
+  `<transition-group>` admite transiciones en movimiento a través de la transformación CSS. Cuando la posición de un hijo en la pantalla ha cambiado después de una actualización, se aplicará una clase CSS en movimiento (generada automáticamente desde el atributo `name` o configurada con el atributo `move-class`). Si la propiedad CSS `transform` es "capaz de transición" cuando se aplica la clase en movimiento, el elemento se animará suavemente a su destino utilizando la [técnica FLIP](https://aerotwist.com/blog/flip-your-animations/).
 
   ```html
   <transition-group tag="ul" name="slide">
