@@ -1232,7 +1232,7 @@ props: {
 
 
 
-### Elementos multi-atriubto <sup data-p="b">altamente recomendado</sup>
+### Elementos multi-atributo <sup data-p="b">altamente recomendado</sup>
 
 **Elementos con múltiples atributos deben ocupar múltiples líneas, con un atributo por línea.**
 
@@ -1271,7 +1271,7 @@ En Javascript, dividir objetos que poseen múltiples propiedades en varias líne
 
 
 
-### Expresiones simples en tempaltes <sup data-p="b">altamente recomendado</sup>
+### Expresiones simples en templates <sup data-p="b">altamente recomendado</sup>
 
 **Plantillas de componentes deben incluir expresiones simples, con expresiones más complejas refactorizadas en propiedades computadas o métodos.**
 
