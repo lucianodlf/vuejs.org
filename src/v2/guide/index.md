@@ -74,7 +74,7 @@ Además de la interpolación de texto, también podemos enlazar atributos de ele
 ``` html
 <div id="app-2">
   <span v-bind:title="message">
-    Mueva el mouse sobre mí durante unos segundos
+    Posicione el mouse sobre mí durante unos segundos
     para ver mi título enlazado dinámicamente.
   </span>
 </div>
@@ -90,7 +90,7 @@ var app2 = new Vue({
 {% raw %}
 <div id="app-2" class="demo">
   <span v-bind:title="message">
-    Mueva el mouse sobre mí durante unos segundos para ver mi título enlazado dinámicamente.
+    Posicione el mouse sobre mí durante unos segundos para ver mi título enlazado dinámicamente.
   </span>
 </div>
 <script>
