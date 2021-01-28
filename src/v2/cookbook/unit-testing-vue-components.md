@@ -245,4 +245,4 @@ Puede encontrar más información acerca de cómo probar los componentes de Vue 
 
 ## Cuándo evitar este patrón
 
-Las pruebas unitarias son una parte importante de cualquier aplicación seria. Al principio, cuando la visión de una aplicación no es clara, las pruebas unitarias pueden ralentizar el desarrollo, pero una vez que se establece una visión y los usuarios reales interactúan con la aplicación, las pruebas unitarias (y otros tipos de pruebas automatizadas) son absolutamente esenciales para asegúrese de que el código sea mantenible y escalable.
+Las pruebas unitarias son una parte importante de cualquier aplicación seria. Al principio, cuando la visión de una aplicación no es clara, las pruebas unitarias pueden ralentizar el desarrollo, pero una vez que se establece una visión y los usuarios reales interactúan con la aplicación, las pruebas unitarias (y otros tipos de pruebas automatizadas) son absolutamente esenciales para asegurarse de que el código sea mantenible y escalable.
