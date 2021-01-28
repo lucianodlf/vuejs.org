@@ -233,9 +233,9 @@ Se recomienda proporcionar una `key` con `v-for` siempre que sea posible, a meno
 
 Como Vue es un mecanismo genérico para identificar nodos, la `key` también tiene otros usos que no están específicamente vinculados a `v-for`, como veremos más adelante en la guía.
 
-## Deteccion del cambios en Array
+## Detección de cambios en el Array
 
-### Metodos de Mutacion
+### Métodos de Mutación
 
 Vue envuelve los métodos de mutación de una matriz observada para que también activen las actualizaciones de vista. Los métodos envueltos son:
 
@@ -304,7 +304,7 @@ Para tratar con la advertencia 2, puede usar `splice`:
 vm.items.splice(newLength)
 ```
 
-## Advertencias con la Deteccion de Cambios en Objetos
+## Advertencias con la Detección de Cambios en Objetos
 
 Una vez más, debido a las limitaciones del JavaScript moderno, **Vue no puede detectar la adición o eliminación de propiedades**. Por ejemplo:
 
@@ -364,7 +364,7 @@ vm.userProfile = Object.assign({}, vm.userProfile, {
 
 ## Mostrando Resultados Filtrados/Ordenados
 
-A veces, queremos mostrar una versión filtrada u ordenada de una matriz sin mutar o restablecer los datos originales. En este caso, puede crear una propiedad computada que devuelva la matriz filtrada o ordenada.
+A veces, queremos mostrar una versión filtrada u ordenada de una matriz sin mutar o restablecer los datos originales. En este caso, puede crear una propiedad computada que devuelva la matriz filtrada u ordenada.
 
 Por ejemplo:
 
@@ -450,7 +450,7 @@ Cuando existen en el mismo nodo, `v-for` tiene una prioridad más alta que `v-if
 </li>
 ```
 
-Lo anterior hace que todos los que no estén completos, se rendericen.
+Lo anterior hace que los todos que no estén completos, se rendericen.
 
 Si, por el contrario, su intención es omitir condicionalmente la ejecución del bucle, puede colocar el `v-if` en un elemento de envoltura (o [`<template>`](conditional.html#Conditional-Groups-with-v-if-on-lt-template-gt)). Por ejemplo:
 
@@ -492,7 +492,7 @@ Aquí hay un ejemplo completo de una lista de tareas simple:
 
 ``` html
 <div id="todo-list-example">
-  <form -on:submit.prevent="addNewTodo">
+  <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">Agregar tarea</label>
     <input
       v-model="newTodoText"
