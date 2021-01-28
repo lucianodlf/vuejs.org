@@ -227,7 +227,7 @@ Cuando escuchamos eventos de teclado, a menudo necesitamos verificar códigos de
 <!-- solo llame a `vm.submit ()` cuando el `keyCode` es 13 -->
 <input v-on:keyup.13="submit">
 ```
-Recordar todos los `keyCodes` son un dolor de cabeza, por lo que Vue proporciona alias para las teclas más utilizadas:
+Recordar todos los `keyCodes` es un dolor de cabeza, por lo que Vue proporciona alias para las teclas más utilizadas:
 
 ``` html
 <!-- lo mismo que arriba -->
@@ -268,7 +268,7 @@ En el ejemplo anterior, solo se llamará al controlador si `$event.key === 'Page
 
 <p class="tip">Algunas teclas (`.esc` y todas las teclas de flecha) tienen valores `key` incoherentes en IE9; se deben preferir sus alias integrados si necesita compatibilidad con IE9.</p>
 
-## Modificador del Teclas del Sistema
+## Modificador de Teclas del Sistema
 
 > Nuevo en 2.1.0+
 
@@ -319,7 +319,7 @@ El modificador `.exact` permite el control de la combinación exacta de modifica
 
 Estos modificadores restringen el controlador a eventos activados por un botón específico del raton.
 
-## Porque Listeners en HTML?
+## ¿Por qué Listeners en HTML?
 
 Es posible que le preocupe que todo este enfoque de escucha de eventos viole las viejas buenas reglas sobre la “separation of concerns” ("separación de preocupaciones"). Tenga la tranquilidad de que todas las funciones y expresiones del controlador de Vue están estrictamente vinculadas a ViewModel que esta manejando la vista actual, no causará ninguna dificultad de mantenimiento. De hecho, hay varios beneficios en el uso de `v-on`:
 
